@@ -69,6 +69,3 @@ workflows:
               only: /^v.*/
             branches:
               ignore: /.*/
-          filters:
-           branches:
-             only: master
