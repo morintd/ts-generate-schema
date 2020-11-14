@@ -8,7 +8,7 @@ import { defaultArgs } from '../types/Generator';
 const args = yargs
   .string('from')
   .default('from', defaultArgs.from)
-  .describe('from', 'Extension of target typescript definitions')
+  .describe('from', 'TS definitions files extension to generate json-schemas from')
   .string('to')
   .default('to', defaultArgs.to)
   .describe('to', 'Extension of generated json-schema')
