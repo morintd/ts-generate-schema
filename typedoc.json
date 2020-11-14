@@ -1,0 +1,7 @@
+{
+  "inputFiles": ["./src"],
+  "out": "build/docs",
+  "mode": "file",
+  "exclude": ["**/*.test.ts", "src/example/**", "src/bin/**"],
+  "target": "ES6"
+}
