@@ -61,10 +61,6 @@ workflows:
           filters:
             tags:
               only: /^v.*/
-      - docs-build:
-          filters:
-           branches:
-             only: master
       - deploy:
           requires:
             - test
@@ -73,10 +69,6 @@ workflows:
               only: /^v.*/
             branches:
               ignore: /.*/
-      - docs-deploy:
-          requires:
-            - test
-            - docs-build
           filters:
            branches:
              only: master
