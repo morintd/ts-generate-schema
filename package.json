@@ -21,7 +21,7 @@
   "scripts": {
     "build": "run-p build:*",
     "build:main": "tsc -p tsconfig.json",
-    "build:mobule": "tsc -p tsconfig.module.json",
+    "build:module": "tsc -p tsconfig.module.json",
     "tsc": "tsc --noEmit",
     "fix": "run-s fix:*",
     "fix:prettier": "prettier \"src/**/*.ts\" --write",
