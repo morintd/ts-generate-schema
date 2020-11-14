@@ -1,6 +1,6 @@
 {
   "name": "ts-generate-schema",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "Easily build reliables service with TypeScript",
   "main": "build/main/index.js",
   "bin": {
