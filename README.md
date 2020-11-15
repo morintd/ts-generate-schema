@@ -87,7 +87,8 @@ Generate json-schema files from your typescript definitions
 - You can also use it globally with `npm i -g ts-generate-schema` and simply running `ts-generate-schema <pattern>` anywhere
 
 ### Command Line
-````pattern``` is a [glob]() pattern to find files to handle.
+```<pattern>``` is a [glob](https://github.com/isaacs/node-glob#readme) pattern to find files to handle.
+
 I would recommand giving those files a special extension (such as .dto.ts or .response.ts for request) and use ```ts-generate-schema src/**/*.dto.ts```
 ```
 Usage: ts-generate-schema <pattern>
@@ -104,15 +105,11 @@ I'm passionate about software architecture, quality and scaling.
 
 I've recently been working on a web and mobile project where I made tons of API calls. I came to the conlusion that my way of handling API calls was ... not good enough.
 
-And, at some point in every project I worked on, we had a server getting an update without the front-end team being perfectly notified about it. Problems that occured :
-  - Information being badly displayed / empty
-  - Some hidden screen crashing when being opened
-  - Unhappy users or clients
-  - It also means that the communication / testing process had weaknesses
+And, at some point in every project I worked on, we had a server getting an update without the front-end team being perfectly notified about it.
 
 My aim was to be able to know when a request we received was different from our primary API. As I'm a TypeScript lover and user, I quickly found some way to use TS definitions as json-schemas with a validator such as AJV.
 
-Nevertheless, libraries providing us with TS => JSON Schema abilities were too low level to be used as they are.
+Nevertheless, libraries providing us with TypeScript to JSON Schema functionnalities were too low level to be used as they are.
 
 I had axios and interceptors to setup my strategies, AJV to handle validation and now this library to quickly generate my JSON-schemas from my TypeScript definitions.
 
