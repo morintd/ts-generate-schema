@@ -6,9 +6,8 @@ import { run } from '../ts-generate-schema';
 import { defaultArgs } from '../types/Generator';
 
 const args = yargs
-  .string('from')
-  .default('from', defaultArgs.from)
-  .describe('from', 'TS definitions files extension to generate json-schemas from')
+  .usage('Usage: ts-generate-schema <pattern>')
+  .demand(1)
   .string('to')
   .default('to', defaultArgs.to)
   .describe('to', 'Extension of generated json-schema')
@@ -16,4 +15,4 @@ const args = yargs
   .default('export', defaultArgs.export)
   .describe('export', 'How to export generated json-schema from file').argv;
 
-run(args);
+run({ pattern: args._[0], ...args });

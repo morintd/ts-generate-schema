@@ -82,19 +82,19 @@ Generate json-schema files from your typescript definitions
 - Add the following scripts in your **package.json**.
 
 ```json
-"schema": "ts-generate-schema"
+"schema": "ts-generate-schema <pattern>"
 ```
 
-- You can also use it globally with `npm i -g ts-generate-schema` and simply running `ts-generate-schema` anywhere
+- You can also use it globally with `npm i -g ts-generate-schema` and simply running `ts-generate-schema <pattern>` anywhere
 
 ### Command Line
+````pattern``` is a [glob]() pattern to find files to handle.
+I would recommand giving those files a special extension (such as .dto.ts or .response.ts for request) and use ```ts-generate-schema src/**/*.dto.ts```
 ```
-Usage: ts-generate-schema
+Usage: ts-generate-schema <pattern>
 Options:
   --help     Show help                                                 [boolean]
   --version  Show version number                                       [boolean]
-  --from     TS definitions files extension to generate json-schemas from
-                                               [string] [default: "response.ts"]
   --to       Extension of generated json-schema     [string] [default: "jsc.ts"]
   --export   How to export generated json-schema from file
                                             [string] [default: "export default"]

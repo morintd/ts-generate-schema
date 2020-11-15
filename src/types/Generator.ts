@@ -1,11 +1,11 @@
 export type TsGenerateSchemaArgs = {
-  from: string;
+  pattern: string;
   to: string;
   export: string;
 };
 
 export const defaultArgs: TsGenerateSchemaArgs = {
-  from: 'response.ts',
+  pattern: '**/*.response.ts',
   to: 'jsc.ts',
   export: 'export default',
 };

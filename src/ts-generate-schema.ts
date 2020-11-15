@@ -8,7 +8,7 @@ import { getSymbolsWithFilePath } from './files';
 import { TsGenerateSchemaArgs } from './types/Generator';
 
 export function run(args: TsGenerateSchemaArgs) {
-  const files = glob.sync(`**/*.${args.from}`);
+  const files = glob.sync(args.pattern);
 
   const symbolsWithFilePath = getSymbolsWithFilePath(files);
 
