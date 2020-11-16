@@ -1,6 +1,6 @@
 {
   "name": "ts-generate-schema",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate json-schema files from your typescript definitions",
   "main": "build/main/index.js",
   "bin": {
