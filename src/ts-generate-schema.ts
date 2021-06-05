@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+import { camelCase } from 'camel-case';
 import glob from 'glob';
 import kebabCase from 'kebab-case';
 
@@ -16,7 +17,7 @@ export function run(args: TsGenerateSchemaArgs) {
     entries.forEach(({ symbols, file, generator }) => {
       const directory = path.dirname(file);
       symbols.forEach((symbol) => {
-        const filePath = path.resolve(directory, 'schema', `${kebabCase(symbol).substring(1)}.${args.to}`);
+        const filePath = path.resolve(directory, 'schema', `${kebabCase(camelCase(symbol))}.${args.to}`);
         const schema = generator.getSchemaForSymbol(symbol);
         const fileContents = `${args.export} ${JSON.stringify(schema, null, 2)}`;
 
