@@ -21,14 +21,14 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install
+      - run: yarn
 
-      - run: npm run test:lint
+      - run: yarn run test:lint
 
-      - run: npm run test:prettier
+      - run: yarn run test:prettier
 
-      - run: npm run test:coverage
-      - run: npm run test
+      - run: yarn run test:coverage
+      - run: yarn run test
 
       - run: curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter && chmod +x ./cc-test-reporter && ./cc-test-reporter before-build
       - run: ./cc-test-reporter after-build --debug -t lcov
