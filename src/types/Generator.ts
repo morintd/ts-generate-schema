@@ -5,7 +5,7 @@ export type TsGenerateSchemaArgs = {
 };
 
 export const defaultArgs: TsGenerateSchemaArgs = {
-  pattern: '**/*.response.ts',
+  pattern: '**/*-response.dto.ts',
   to: 'jsc.ts',
   export: 'export default',
 };

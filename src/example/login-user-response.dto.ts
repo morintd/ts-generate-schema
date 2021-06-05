@@ -1,4 +1,4 @@
-export type RawLoginUserResponse = {
+export type LoginUserResponseDTO = {
   user: {
     id: string;
     createdAt: string;
@@ -23,7 +23,7 @@ export type RawLoginUserResponse = {
   };
 };
 
-export const nullRawLoginUserResponse: RawLoginUserResponse = {
+export const nullLoginUserResponse: LoginUserResponseDTO = {
   user: {
     id: '',
     createdAt: '2018-09-22T15:00:00.000Z',

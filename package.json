@@ -1,6 +1,6 @@
 {
   "name": "ts-generate-schema",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Generate json-schema files from your typescript definitions",
   "main": "build/main/index.js",
   "bin": {
@@ -68,9 +68,10 @@
     "README.md"
   ],
   "dependencies": {
-    "glob": "^7.1.6",
-    "kebab-case": "^1.0.0",
-    "yargs": "^16.1.0",
-    "typescript-json-schema": "^0.43.0"
+    "camel-case": "^4.1.2",
+    "glob": "^7.1.7",
+    "kebab-case": "^1.0.1",
+    "typescript-json-schema": "^0.50.1",
+    "yargs": "^17.0.1"
   }
 }
