@@ -11,9 +11,7 @@ describe('files', () => {
     });
 
     it('should rejects with error', async () => {
-      return expect(Promise.all(getSymbolsWithFilePath([(undefined as unknown) as string]))).rejects.toEqual(
-        new TypeError("Cannot read property 'replace' of undefined"),
-      );
+      return expect(Promise.all(getSymbolsWithFilePath([(undefined as unknown) as string]))).rejects.toThrow();
     });
   });
 });
