@@ -71,7 +71,7 @@
     "camel-case": "^4.1.2",
     "glob": "^7.1.7",
     "kebab-case": "^1.0.1",
-    "typescript-json-schema": "^0.51.0",
+    "typescript-json-schema": "^0.52.0",
     "yargs": "^17.0.1"
   }
 }
