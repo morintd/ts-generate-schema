@@ -102,6 +102,7 @@ Options:
   --to       Extension of generated json-schema     [string] [default: "jsc.ts"]
   --export   How to export generated json-schema from file
                                             [string] [default: "export default"]
+  --out       Path to the generated schema directory     [string] [default: "schema"]
 ```
 
 ## Motivation
